@@ -1,0 +1,9 @@
+
+services:
+  - type: web
+    name: scramjet-free
+    runtime: node
+    plan: free
+    region: frankfurt
+    buildCommand: npm install -g pnpm@10.18.3 && pnpm install --frozen-lockfile
+    startCommand: node src/index.js
